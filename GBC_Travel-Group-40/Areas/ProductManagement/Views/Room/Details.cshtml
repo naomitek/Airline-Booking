@@ -1,0 +1,38 @@
+﻿@model GBC_Travel_Group_40.Areas.ProductManagement.Models.Rooms
+@{
+    ViewData["Title"] = "Room Details";
+}
+
+<h1>@ViewData["Title"]</h1>
+<div>
+    <img src="~/images/hotels/@Model.Url" width="400" height="280" />
+    <hr />
+    <dl class="row">
+
+        <dt class="col-sm-2">Hotel Name</dt>
+        <dd class="col-sm-10">@Model.HotelName</dd>
+
+        <dt class="col-sm-2">Location</dt>
+        <dd class="col-sm-10">@Model.Location</dd>
+
+        <dt class="col-sm-2">Price Per Night</dt>
+        <dd class="col-sm-10">$@Model.PricePerNight</dd>
+
+        <dt class="col-sm-2">Rating</dt>
+        <dd class="col-sm-10">@Model.Rating</dd>
+
+        <dt class="col-sm-2">Amenities</dt>
+        <div>
+        @{
+            if (Model.PetFriendly){<dd class="col-sm-10">Pet Friendly</dd>}
+            if (Model.AirConditioning){<dd class="col-sm-10">Air Conditioning</dd>}
+            if (Model.Wifi){<dd class="col-sm-10">Wifi</dd>}
+        }
+        </div>
+    </dl>
+</div>
+<div>
+    <a asp-controller="RoomBooking" asp-action="Create" asp-route-fid="@Model.RoomId" class="btn btn-secondary">Booking</a>
+    <a asp-action="Index" asp-controller="Room" class="btn btn-secondary">Back to List</a>
+</div>
+

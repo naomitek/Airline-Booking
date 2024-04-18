@@ -1,0 +1,237 @@
+﻿@model List<Cars>
+
+@{
+    //Razor Block
+    ViewData["Title"] = "Cars";
+
+    bool searchPerformed = ViewData["SearchPerformed"] as bool? ?? false;
+    string searchString = ViewData["SearchString"] as string;
+
+}
+
+<style>
+
+
+    .flight-option {
+        background-color: #f5f8fa;
+        border: 1px solid #e1e8ed;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    .tag {
+        font-weight: bold;
+        padding: 5px 10px;
+        color: white;
+        border-radius: 5px;
+    }
+
+    .cheapest {
+        background-color: #0074d9;
+    }
+
+    .details {
+        margin-left: 20px;
+    }
+
+    .price {
+        font-size: 18px;
+        color: green;
+    }
+
+    .availability {
+        color: #2ecc40;
+    }
+
+
+    .container {
+        background-color: #E0D9EB;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-u2bRA6ZRKLcFVSM+9zBBYRnGGe9YKXxvqR8LwWWtms5/2xfbbFZl+q1wkab2tiyM" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <title>Car Options</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h3>Filters</h3>
+                <form method="get" action="/CarRentals">
+                    <div class="form-group">
+                        <label for="carType">Car Type</label>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="carType" value="Car" /> Car
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="carType" value="SUV" /> SUV
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="carType" value="Van" /> Van
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="carType" value="Convertible" /> Convertible
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="carType" value="PickupTruck" /> Pickup Truck
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="carType" value="ElectricVehicle" /> Electric Vehicle
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="carType" value="SuppliersChoice" /> Supplier's Choice
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Deals</label>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="allDeals" /> All Deals
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="from" /> From
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="sale" /> Sale
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="payNowSave" /> Pay Now & Save
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Fuel Type</label>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="allFuelTypes" /> All Fuel Types
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="fromGasoline" /> Gasoline
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="electric" /> Electric
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="hybrid" /> Hybrid
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-md-9">
+                <h3>Car Options</h3>
+                @if (User.IsInRole("SuperAdmin") || User.IsInRole("Admin"))
+                {
+                    <a class="btn btn-primary" asp-area="ProductManagement" asp-controller="Car" asp-action="Create">Create New Car</a>
+                }
+                <div class="list-group">
+                    <div class="list-group-item">
+                        <div class="d-flex align-items-center">
+                            <div class="mr-3">
+                                <i class="fab fa-american-airlines"></i>
+                            </div>
+                            <div class="car-list">
+                                @if (Model.Any())
+                                {
+                                    <table>
+                                        @foreach (var car in Model)
+                                        {
+                                            <tr class="car-option">
+                                                <td>
+                                                    <img src="~/images/cars/@car.Url" width="190" height="130"/>
+                                                </td>
+                                                <td class="flight-info">
+                                                    <span class="Company">
+                                                        Company: @car.CarCompany
+                                                    </span>
+                                                    <div class="price">$@car.Pricing per day</div>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        @{string availableMassage = car.Available? "Available" : "Not Available"; }
+                                                        <h3><b>@availableMassage</b></h3>
+                                                    </div>
+                                                    <div>
+                                                        <a asp-action="Details" asp-route-id="@car.CarId" class="btn btn-info">Details</a> 
+                                                    </div>
+                                                    <div>
+                                                        @if (car.Available)
+                                                        {
+                                                            <a asp-controller="CarBooking" asp-action="Create" asp-route-fid="@car.CarId" asp-route-pid="1" class="btn btn-secondary">Booking</a>
+                                                        }
+                                                    </div>
+                                                </td>
+                                                @if (User.IsInRole("SuperAdmin") || User.IsInRole("Admin"))
+                                                {
+                                                    <td>
+                                                        <div>
+                                                            <a asp-action="Edit" asp-route-id="@car.CarId" class="btn btn-secondary">Edit</a>
+                                                        </div>
+                                                        <div>
+                                                            <a asp-action="Delete" asp-route-id="@car.CarId" class="btn btn-danger">Delete</a>
+                                                        </div>
+                                                    </td>
+                                                }
+                                              </tr>
+                                            }
+                                        </table>
+                                    }
+                                    else
+                                    {
+                                        if (searchPerformed)
+                                        {
+                                            <p>No Car with "@searchString".</p>
+                                        }
+                                        else
+                                        {
+                                            <p><b>No Car Available</b></p>
+                                        }
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

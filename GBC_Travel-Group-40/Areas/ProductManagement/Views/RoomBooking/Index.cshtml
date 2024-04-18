@@ -1,0 +1,40 @@
+﻿@model List<GBC_Travel_Group_40.Areas.ProductManagement.Models.RoomBookings>
+
+@{
+    ViewData["Title"] = "Room Booking List";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name Of Holder</th>
+            <th>Phone Of Holder</th>
+            <th>Room Id</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var roomBooking in Model)
+        {
+            <tr>
+                <td>@roomBooking.RoomBookingId</td>
+                <td>@roomBooking.NameOfHolder</td>
+                <td>@roomBooking.PhoneOfHolder</td>
+                <td>@roomBooking.RoomId</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@roomBooking.RoomBookingId" class="btn btn-secondary">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@roomBooking.RoomBookingId" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

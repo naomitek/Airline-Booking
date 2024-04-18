@@ -1,0 +1,32 @@
+﻿@model List<BookingFlights>
+@{
+    ViewData["Title"] = "Booking Flight";
+
+}
+    <head>
+    <h2>Flight Booking List</h2>
+    </head>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Pid Id</td>
+                <td>Fid Id</td>
+            </tr>
+        </thead>
+
+        @foreach (var bookingFlight in Model)
+        {
+            <tr>
+                <td>@bookingFlight.BookingFlightId</td>
+                <td>@bookingFlight.PassengerId</td>
+                <td>@bookingFlight.FlightId</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@bookingFlight.BookingFlightId" class="btn btn-info">Details</a>
+                    <a asp-action="Edit" asp-route-id="@bookingFlight.BookingFlightId" class="btn btn-secondary">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@bookingFlight.BookingFlightId" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </table>

@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\Users\lizze\source\repos\GBC_Travel-Group-40\obj\Release\net8.0\PubTmp\Out\" />
+  <dbfullsql path="C:\Users\lizze\source\repos\GBC_Travel-Group-40\obj\Release\net8.0\PubTmp\EFSQLScripts\GBC_Travel_Group_40.Data.ApplicationDbContext.sql" />
+</sitemanifest>

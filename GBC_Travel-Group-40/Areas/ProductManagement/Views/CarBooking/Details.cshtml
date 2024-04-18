@@ -1,0 +1,65 @@
+﻿@model GBC_Travel_Group_40.Areas.ProductManagement.Models.CarBookings
+
+@{
+    ViewData["Title"] = "Details";
+    var car = ViewBag.car;
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>CarBookings</h4>
+    <hr />
+    <dl class="row">
+        <div><img src="~/images/cars/@car.Url" width="400" height="280" /></div>
+        <dt class = "col-sm-2">
+            Car Company & Model:
+        </dt>
+        <dd class = "col-sm-10">
+            @car.CarCompany & @car.Model
+        </dd>
+        <dt class="col-sm-2">
+            Limit Passengers
+        </dt>
+        <dd class="col-sm-10">
+            @car.LimitPassengers
+        </dd>
+        <dt class="col-sm-2">
+            Origen - Destination
+        </dt>
+        <dd class="col-sm-10">
+            @car.OrigenLocation - @car.DestinationLocation
+        </dd>
+        <dt class="col-sm-2">
+            Departure Time:
+        </dt>
+        <dd class="col-sm-10">
+            @car.DepartureTime
+        </dd>
+
+        <h2>Holder</h2>
+        <dt class="col-sm-2">
+            Name:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NameOfHolder)
+        </dd>
+        <dt class="col-sm-2">
+            Phone:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PhoneOfHolder)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.CarBookingId">Edit</a> |
+    @if (User.IsInRole("Admin") || User.IsInRole("SuperAdmin"))
+    {
+        <a asp-action="Index">Back to List</a>
+    }
+    else
+    {
+        <a asp-action="Index" asp-controller="Cart">Back to List</a>
+    }
+</div>

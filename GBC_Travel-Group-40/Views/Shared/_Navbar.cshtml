@@ -1,0 +1,106 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using GBC_Travel_Group_40.Areas.ProductManagement.Models
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <div class="container-fluid">
+
+        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+            <i class="fas fa-solid fa-plane" style="font-size: 20px;"></i>
+            <img src="~/images/advertisement/gbc.jpeg" alt="GBC Travel Logo" style="width: 30px; height: 30px;">
+            Travel
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+            <ul class="navbar-nav flex-grow-1 justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><i class="fas fa-house"></i>Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Aboutus"><i class="fas fa-circle-info"></i>About Us</a>
+                </li>
+
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menu <i class="fas fa-bars"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" asp-area="ProductManagement" asp-controller="Car" asp-action="Index">Car</a>
+                        <a class="dropdown-item" asp-area="ProductManagement" asp-controller="Room" asp-action="Index">Hotel</a>
+                        <a class="dropdown-item" asp-area="ProductManagement" asp-controller="Flights" asp-action="Index">Flight</a>
+                        @if (User.IsInRole("Admin") || User.IsInRole("SuperAdmin"))
+                        {
+                            <b>Management Booking</b>
+                            <a class="dropdown-item" asp-area="ProductManagement" asp-controller="CarBooking" asp-action="Index">Car Booking</a>
+                            <a class="dropdown-item" asp-area="ProductManagement" asp-controller="RoomBooking" asp-action="Index">Hotel Booking</a>
+                            <a class="dropdown-item" asp-area="ProductManagement" asp-controller="BookingFlights" asp-action="Index">Flight Booking</a>
+                        }
+
+                    </div>
+                </li>
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    <li class="nav-item d-flex align-items-center">
+                        @if (UserManager.GetUserAsync(User).Result.ProfilePicture != null)
+                        {
+                            <img style="width: 40px; height: 40px; object-fit:cover; border-radius: 20px; margin-right: 2px;"
+                                 src="data:image/*;base64,@(Convert.ToBase64String(UserManager.GetUserAsync(User).Result.ProfilePicture))" />
+                        }
+                        <a class="nav-link text-dark" style="padding-left: 2px; margin-left: 0;" asp-area="Identity"
+                           asp-page="/Account/Manage/Index" title="Manage account">
+                            <i class="fade fa-user-citcle"></i>Hello @User.Identity?.Name
+                        </a>
+                    </li>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="/" asp-controller="/UserRoles">
+                                <i class="fade fa-sign-in-alt"></i>User Roles
+                            </a>
+                        </li>
+                        @if (User.IsInRole("SuperAdmin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="/" asp-controller="/RoleManager">
+                                    <i class="fade fa-sign-in-alt"></i>Role Manager
+                                </a>
+                            </li>
+                        }
+                    }
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="ProductManagement" asp-controller="Cart" asp-action="Index">
+                            <i class="fas fa-shopping-cart"></i> Cart
+                            <span class="badge badge-pill badge-danger" id="cartItemCount">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <form asp-area="Identity" asp-page="/Account/Logout" method="post">
+                            <button type="submit" class="nav-link btn btn-link text-dark" style="cursor:pointer">Logout</button>
+                        </form>
+                    </li>
+                }
+                else
+                {
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">
+                            <i class="fa fa-sign-in-alt"></i>Login
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">
+                            <i class="fa fa-user-plus"></i>Register
+                        </a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+
+</nav>

@@ -1,0 +1,32 @@
+﻿@model List<Passengers>
+@{
+    ViewData["Title"] = "Passengers";
+}
+<head>
+    <h2>Passengers</h2>
+</head>
+
+<a class="btn btn-primary" asp-area="" asp-action="Create">Create New Passengers</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Full Name</td>
+        </tr>
+    </thead>
+
+    @foreach (var passenger in Model)
+    {
+        <tr>
+            <td>@passenger.PassengerId</td>
+            <td>@passenger.FirstName @passenger.LastName</td>
+            <td>
+                <a asp-action="Details" asp-route-id="@passenger.PassengerId" class="btn btn-info">Details</a>
+                <a asp-action="Edit" asp-route-id="@passenger.PassengerId" class="btn btn-secondary">Edit</a>
+                <a asp-action="Create" asp-controller="BookingFlights" asp-route-pid="@passenger.PassengerId" asp-route-fid="1" class="btn btn-secondary">Booking Flight with Fid 1</a>
+
+            </td>
+        </tr>
+    }
+</table>

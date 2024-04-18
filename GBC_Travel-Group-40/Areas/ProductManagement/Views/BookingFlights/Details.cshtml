@@ -1,0 +1,67 @@
+﻿@model GBC_Travel_Group_40.Areas.ProductManagement.Models.BookingFlights
+
+@{
+    ViewData["Title"] = "Details";
+    var passenger = ViewBag.passenger;
+    var flight = ViewBag.flight;
+    TimeSpan totalTime = flight.ArrivalTime - flight.DepartureTime;
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>BookingFlights</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Airlines:
+        </dt>
+        <dd class = "col-sm-10">
+            @flight.Airlines
+        </dd>
+        <dt class="col-sm-2">
+            Origen - Destination:
+        </dt>
+        <dd class="col-sm-10">
+            @flight.Origen - @flight.Destination
+        </dd>
+        <dt class="col-sm-2">
+            Departure - Arrival:
+        </dt>
+        <dd class="col-sm-10">
+            @flight.DepartureTime - @flight.ArrivalTime (@totalTime)
+    </dl>
+    <h2>Passenger</h2>
+    <dl class="row">
+        <dt class="col-sm-2">
+            Full Name:
+        </dt>
+        <dd class="col-sm-10">
+            @passenger.FirstName, @passenger.LastName
+        </dd>
+        <dt class="col-sm-2">
+            Phone:
+        </dt>
+        <dd class="col-sm-10">
+            @passenger.Phone
+        </dd>
+        <dt class="col-sm-2">
+            Email:
+        </dt>
+        <dd class="col-sm-10">
+            @passenger.Email
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.BookingFlightId">Edit</a> |
+    @if (User.IsInRole("Admin") || User.IsInRole("SuperAdmin"))
+    {
+        <a asp-action="Index">Back to List</a>
+    }
+    else
+    {
+        <a asp-action="Index" asp-controller="Cart">Back to List</a>
+    }
+
+</div>

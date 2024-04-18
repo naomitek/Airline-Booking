@@ -1,0 +1,336 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    body {
+        background-color: #E0D9EB;
+    }
+
+    .container {
+        background-color: #E0D9EB;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+    }
+
+</style>
+<div class="container mt-5">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showFlights()"><i class="fas fa-plane"></i> Flights</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showHotels()"><i class="fas fa-hotel"></i> Hotels</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showCarRentals()"><i class="fas fa-car"></i> Car Rentals</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<h2 id="section-title">Welcome To GBC Travel</h2>
+
+<!-- Flights Section -->
+<div id="flights-section" style="display:none;">
+    <form asp-area="ProductManagement" asp-controller="Flights" asp-action="Search" method="get" class="mt-4">
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <label for="leavingFrom" class="form-label">Leaving From:</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                    <input type="text" class="form-control" name="leavingFrom" placeholder="Enter departure location" required>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="goingTo" class="form-label">Going To:</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                    <input type="text" class="form-control" name="goingTo" placeholder="Enter destination" required>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="departureDate" class="form-label">Departure Date:</label>
+                <input type="date" class="form-control" name="departureDate" required>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="passengers" class="form-label">Passengers:</label>
+                <input type="number" class="form-control" name="numPassengers" min="1" required>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Search Flights</button>
+    </form>
+</div>
+
+<!-- Hotels Section -->
+<div id="hotels-section" style="display:none;">
+
+    <form asp-area="ProductManagement" asp-controller="Room" asp-action="Search" method="get" class="mt-4">
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <label for="location" class="form-label">Destination City:</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                    <input type="text" class="form-control" name="location" placeholder="Enter destination city" required>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="checking" class="form-label">Check-In Date:</label>
+                <input type="date" class="form-control" name="checking" required>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="checkout" class="form-label">Check-Out Date:</label>
+                <input type="date" class="form-control" name="checkout" required>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="numberOfBeds" class="form-label">Beds:</label>
+                <input type="number" class="form-control" name="numberOfBeds" min="1" max="2" required>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Search Hotels</button>
+    </form>
+</div>
+
+<!-- Car Rentals Section -->
+<div id="car-rentals-section" style="display:none;">
+
+    <form asp-area="ProductManagement" asp-controller="Car" asp-action="Search" method="get" class="mt-4">
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <label for="pickupLocation" class="form-label">Pickup Location:</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                    <input type="text" class="form-control" name="pickupLocation" placeholder="Enter pickup location" required>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="dropOffLocation" class="form-label">Drop-Off Location:</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                    <input type="text" class="form-control" name="dropOffLocation" placeholder="Enter drop-off location" required>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="rentaldate" class="form-label"> Rental Date:</label>
+                <input type="date" class="form-control" name="rentaldate" required>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Search Car Rentals</button>
+    </form>
+</div>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h2>Discover Your New Favorite Stay</h2>
+            <p>Find the perfect vacation spot for your next adventure.</p>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-3">
+            <div class="hotel-card">
+                <img src="~/images/resort/resort.jpeg" alt="Spa " class="img-fluid" width="300" height="200">
+                <h3>Spa </h3>
+
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="hotel-card">
+                <img src="~/images/resort/resort2.jpeg" alt="Hotel" class="img-fluid" width="300" height="200">
+                <h3>Hotel</h3>
+
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="hotel-card">
+                <img src="~/images/resort/resort3.jpeg" alt="Cabin" class="img-fluid" width="300" height="200">
+                <h3>Cabin</h3>
+
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="hotel-card">
+                <img src="~/images/resort/resort4.jpeg" alt="Resort" class="img-fluid" width="300" height="200">
+                <h3>Resort</h3>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Center the Advertisement Section -->
+<div class="col-md-4 offset-md-4 text-center">
+    <div class="advertisement-card">
+        <img src="~/images/advertisement/banner.jpeg" alt="Advertisement Banner" class="img-fluid" width="200" height="200">
+        <h2 class="mt-3">Explore Your World</h2>
+        <p>Embark on unforgettable journeys. Discover new horizons in 2024.</p>
+        <a href="#" class="btn btn-primary mt-3">Book Now</a>
+    </div>
+</div>
+
+<div class="container mt-4">
+    <div class="row mt-4">
+        <div class="col-md-4 text-center">
+            <div class="hotel-card">
+                <img src="~/images/vacation/vacation.jpeg" alt="Vacation in Rome" class="img-fluid" width="500" height="500">
+                <h3>Rome</h3>
+            </div>
+        </div>
+        <div class="col-md-4 text-center">
+            <div class="hotel-card">
+                <img src="~/images/vacation/vacation1.jpeg" alt="Vacation in Athens" class="img-fluid" width="500" height="500">
+                <h3>Athens</h3>
+            </div>
+        </div>
+        <div class="col-md-4 text-center">
+            <div class="hotel-card">
+                <img src="~/images/vacation/vacation2.jpeg" alt="Vacation in Barcelona" class="img-fluid" width="500" height="500">
+                <h3>Barcelona</h3>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-4 text-center">
+            <div class="hotel-card">
+                <img src="~/images/vacation/vacation3.jpeg" alt="Vacation in Paris" class="img-fluid" width="500" height="500">
+                <h3>Paris</h3>
+            </div>
+        </div>
+        <div class="col-md-4 text-center">
+            <div class="hotel-card">
+                <img src="~/images/vacation/vacation4.jpeg" alt="Vacation in Tokyo" class="img-fluid" width="500" height="500">
+                <h3>Tokyo</h3>
+            </div>
+        </div>
+        <div class="col-md-4 text-center">
+            <div class="hotel-card">
+                <img src="~/images/vacation/vacation5.jpeg" alt="Vacation in Asmara" class="img-fluid" width="500" height="500">
+                <h3>Asmara</h3>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-4 text-center">
+            <div class="hotel-card">
+                <img src="~/images/vacation/vacation6.jpeg" alt="Vacation in New York" class="img-fluid" width="500" height="500">
+                <h3>New York</h3>
+            </div>
+        </div>
+        <div class="col-md-4 text-center">
+            <div class="hotel-card">
+                <img src="~/images/vacation/vacation16.jpeg" alt="Vacation in Hongkong" class="img-fluid" width="500" height="500">
+                <h3>Hongkong</h3>
+            </div>
+        </div>
+        <div class="col-md-4 text-center">
+            <div class="hotel-card">
+                <img src="~/images/vacation/vacation8.jpeg" alt="Vacation in Berlin" class="img-fluid" width="500" height="500">
+                <h3>Berlin</h3>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-4 text-center">
+            <div class="hotel-card">
+                <img src="~/images/vacation/vacation15.jpeg" alt="Vacation in Peru" class="img-fluid" width="500" height="500">
+                <h3>Peru</h3>
+            </div>
+        </div>
+
+        <div class="col-md-4 text-center">
+            <div class="hotel-card">
+                <img src="~/images/vacation/vacation10.jpeg" alt="Vacation in Beijing" class="img-fluid" width="500" height="500">
+                <h3>Beijing</h3>
+            </div>
+        </div>
+        <div class="col-md-4 text-center">
+            <div class="hotel-card">
+                <img src="~/images/vacation/vacation11.jpeg" alt="Vacation in Cairo" class="img-fluid" width="500" height="500">
+                <h3>Cairo</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <!-- Vacation Images -->
+        <div class="col-md-4 text-center">
+            <div class="hotel-card">
+                <img src="~/images/vacation/vacation12.jpeg" alt="Vacation in Moscow" class="img-fluid" width="500" height="500">
+                <h3>Moscow</h3>
+                <p>Experience the rich history and culture of Moscow.</p>
+            </div>
+        </div>
+        <div class="col-md-4 text-center">
+            <div class="hotel-card">
+                <img src="~/images/vacation/vacation13.jpeg" alt="Vacation in Amsterdam" class="img-fluid" width="500" height="500">
+                <h3>Amsterdam</h3>
+                <p>Explore the charming canals and vibrant streets of Amsterdam.</p>
+            </div>
+        </div>
+        <div class="col-md-4 text-center">
+            <div class="hotel-card">
+                <img src="~/images/vacation/vacation14.jpeg" alt="Vacation in Sydney" class="img-fluid" width="500" height="500">
+                <h3>Sydney</h3>
+                <p>Enjoy the stunning beaches and iconic landmarks of Sydney.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-4 text-center">
+            <div class="hotel-card">
+                <img src="~/images/vacation/vacation15.jpeg" alt="Vacation in Hongkong" class="img-fluid" width="500" height="500">
+                <h3>HongKong</h3>
+                <p>Experience the vibrant culture and skyline of Hong Kong.</p>
+            </div>
+        </div>
+        <div class="col-md-4 text-center">
+            <div class="hotel-card">
+                <img src="~/images/vacation/vacation9.jpeg" alt="Vacation in Dubai" class="img-fluid" width="500" height="500">
+                <h3>Dubai</h3>
+                <p>Indulge in luxury and modernity in the heart of Dubai.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script>
+    function showFlights() {
+        showSection('flights-section', 'Flights', 'fas fa-plane');
+    }
+
+    function showHotels() {
+        showSection('hotels-section', 'Hotels', 'fas fa-hotel');
+    }
+
+    function showCarRentals() {
+        showSection('car-rentals-section', 'Car Rentals', 'fas fa-car');
+    }
+
+    function showSection(sectionId, sectionTitle, iconClass) {
+        // Hide all sections
+        $('#flights-section').hide();
+        $('#hotels-section').hide();
+        $('#car-rentals-section').hide();
+
+        // Show the selected section
+        $('#' + sectionId).show();
+
+        // Update the section title with icon
+        $('#section-title').html(`<i class="${iconClass}"></i> ${sectionTitle}`);
+    }</script>
+
+

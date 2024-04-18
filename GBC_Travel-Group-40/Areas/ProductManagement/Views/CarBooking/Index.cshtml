@@ -1,0 +1,41 @@
+﻿@model List<GBC_Travel_Group_40.Areas.ProductManagement.Models.CarBookings>
+
+@{
+    ViewData["Title"] = "Car Booking List";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name Of Holder</th>
+            <th>Phone Of Holder</th>
+            <th>Car Id</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var carBooking in Model)
+        {
+            <tr>
+                <td>@carBooking.CarBookingId</td>
+                <td>@carBooking.NameOfHolder</td>
+                <td>@carBooking.PhoneOfHolder</td>
+                <td>@carBooking.CarId</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@carBooking.CarBookingId" class="btn btn-secondary">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@carBooking.CarBookingId" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

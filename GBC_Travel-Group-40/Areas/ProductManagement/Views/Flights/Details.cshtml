@@ -1,0 +1,31 @@
+﻿@model GBC_Travel_Group_40.Areas.ProductManagement.Models.Flights
+@{
+    ViewData["Title"] = "Flight Details";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="card">
+    <div class="card-body">
+        <h3 class="card-title">@Model.Airlines</h3>
+
+        <dl class="row">
+
+            <dt class="col-sm-3">Airlines</dt>
+            <dd class="col-sm-9">@Model.Airlines</dd>
+
+            <dt class="col-sm-3">Location</dt>
+            <dd class="col-sm-9">@Model.Origen TO @Model.Destination</dd>
+
+            <dt class="col-sm-3">Date and Time</dt>
+            <dd class="col-sm-9">@Model.DepartureTime.ToString("dd/mm/yyyy HH:mm") - @Model.ArrivalTime.ToString("dd/mm/yyyy HH:mm")</dd>
+
+            <dt class="col-sm-3">Price</dt>
+            <dd class="col-sm-9">@Model.Price.ToString("C")</dd>
+        </dl>
+
+        <a asp-controller="BookingFlights" asp-action="MakeBooking" asp-route-fid="@Model.FlightId" asp-route-numPassengers="1" class="btn btn-secondary">Booking</a>
+        <a asp-controller="Flights" asp-action="Index" class="btn btn-info">Back to List</a>
+
+    </div>
+</div>

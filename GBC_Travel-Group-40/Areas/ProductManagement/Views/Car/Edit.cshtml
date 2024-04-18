@@ -1,0 +1,76 @@
+﻿@model GBC_Travel_Group_40.Areas.ProductManagement.Models.Cars
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Cars</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="CarId" />
+            <div class="form-group">
+                <label asp-for="CarCompany" class="control-label"></label>
+                <input asp-for="CarCompany" class="form-control" />
+                <span asp-validation-for="CarCompany" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Model" class="control-label"></label>
+                <input asp-for="Model" class="form-control" />
+                <span asp-validation-for="Model" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OrigenLocation" class="control-label"></label>
+                <input asp-for="OrigenLocation" class="form-control" />
+                <span asp-validation-for="OrigenLocation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DestinationLocation" class="control-label"></label>
+                <input asp-for="DestinationLocation" class="form-control" />
+                <span asp-validation-for="DestinationLocation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pricing" class="control-label"></label>
+                <input asp-for="Pricing" class="form-control" />
+                <span asp-validation-for="Pricing" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DepartureTime" class="control-label"></label>
+                <input asp-for="DepartureTime" class="form-control" />
+                <span asp-validation-for="DepartureTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ArrivalTime" class="control-label"></label>
+                <input asp-for="ArrivalTime" class="form-control" />
+                <span asp-validation-for="ArrivalTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LimitPassengers" class="control-label"></label>
+                <input asp-for="LimitPassengers" class="form-control" />
+                <span asp-validation-for="LimitPassengers" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Available" /> @Html.DisplayNameFor(model => model.Available)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Url" class="control-label"></label>
+                <input asp-for="Url" class="form-control" />
+                <span asp-validation-for="Url" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "mssql2": {
+      "restored": true,
+      "restoreTime": "2024-04-16T19:51:43.5310095Z"
+    }
+  },
+  "parameters": {
+    "mssql2.resourceGroupName": {
+      "Name": "mssql2.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "TravelGroup"
+    },
+    "mssql2.subscriptionId": {
+      "Name": "mssql2.subscriptionId",
+      "Type": "subscription",
+      "Value": "effcbdab-06fa-4808-9f99-c7d45f94c9a8"
+    }
+  }
+}

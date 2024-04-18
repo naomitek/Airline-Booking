@@ -1,0 +1,234 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using GBC_Travel_Group_40.Areas.ProductManagement.Models
+@inject SignInManager<ApplicationUser> SignInManager
+@model List<Flights>
+@{
+    ViewData["Title"] = "Index";
+    // Search
+    bool searchPerformed = ViewData["SearchPerformed"] as bool? ?? false;
+    string searchString = ViewData["SearchString"] as string;
+    int numPassengers = ViewData["numPassengers"] as int? ?? 1;
+    // filters
+    List<Flights> flightList = ViewBag.flightList;
+}
+<style>
+
+
+    .flight-option {
+        background-color: #f5f8fa;
+        border: 1px solid #e1e8ed;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    .tag {
+        font-weight: bold;
+        padding: 5px 10px;
+        color: white;
+        border-radius: 5px;
+    }
+
+    .cheapest {
+        background-color: #0074d9;
+    }
+
+    .details {
+        margin-left: 20px;
+    }
+
+    .price {
+        font-size: 18px;
+        color: green;
+    }
+
+    .availability {
+        color: #2ecc40;
+    }
+
+
+    .container {
+        background-color: #E0D9EB;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-u2bRA6ZRKLcFVSM+9zBBYRnGGe9YKXxvqR8LwWWtms5/2xfbbFZl+q1wkab2tiyM" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <title>Flight Options</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h3>Filters</h3>
+                <form asp-action="Filters" method="get" class="mt-4">
+                    <div class="savesearch-date"></div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="PriceRange" value="p1" /> $0 - $100
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="PriceRange" value="p2" /> $101 - $300
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="PriceRange" value="p3" /> $301 - $500
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="PriceRange" value="p4" /> Above $500
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="airline">Airlines</label>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="airline" value="American" /> American
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="airline" value="Delta" /> Delta
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="airline" value="United" /> United
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="airline" value="Southwest" /> Southwest
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="airline" value="JetBlue" /> JetBlue
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="airline" value="Lufthansa" /> Lufthansa
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="airline" value="AirFrance" /> AirFrance
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="airline" value="British Airways" /> British Airways
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="airline" value="United Airlines" /> United Airlines
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="airline" value="Austrian Airlines" /> Austrian Airlines
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+
+            </div>
+            <div class="col-md-9">
+                <h3>Flight Options</h3>
+                @if (User.IsInRole("SuperAdmin") || User.IsInRole("Admin"))
+                {
+                    <a class="btn btn-primary" asp-area="ProductManagement" asp-controller="Flights" asp-action="Create">Create New Flight</a>
+                }
+                <div class="list-group">
+                    <div class="list-group-item">
+                        <div class="d-flex align-items-center">
+                            <div class="mr-3">
+                                <i class="fab fa-american-airlines"></i>
+                            </div>
+                            <div class="flight-list">
+                                @if(Model.Any())
+                                    {
+                                    <table class="flight-option">                               
+                                        @foreach (var flight in Model)
+                                            {
+                                                TimeSpan duration = flight.ArrivalTime - flight.DepartureTime;
+                                                int availabSeat = flight.MaxSeat - flight.NumOfPassengers;
+                                                <tr class="flight-option"> 
+                                                    <td>
+                                                    <div class="flight-Airlines"><b>@flight.Airlines</b></div>
+                                                    </td>
+                                                    <td class="flight-info">
+                                                    <span class="Duration">
+                                                        Duration: @duration.ToString("hh")h @duration.ToString("mm")m 
+                                                    </span>
+                                                    <div>@flight.Origen    -   @flight.Destination</div>
+                                                        <div class="price">$@flight.Price</div>
+                                                        <div class="availability">@availabSeat seat left at this price</div>
+                                                    </td>
+                                                    <td class="action">
+                                                        <div>
+                                                            <a asp-action="Details" asp-route-id="@flight.FlightId" class="btn btn-info">Details</a>
+                                                        </div>
+                                                        <div>
+                                                        @if (availabSeat > 0)
+                                                        {
+                                                            <a asp-controller="BookingFlights" asp-action="MakeBooking" asp-route-fid="@flight.FlightId" asp-route-numPassengers="@numPassengers" class="btn btn-secondary">Booking</a>
+                                                        }
+                                                        else
+                                                        {
+                                                            <h3><b>Full</b></h3>
+                                                        }
+                                                        </div>
+                                                    </td>
+                                                    @if (User.IsInRole("SuperAdmin") || User.IsInRole("Admin"))
+                                                    {
+                                                        <td>
+                                                            <div>
+                                                                <a asp-action="Edit" asp-route-id="@flight.FlightId" class="btn btn-secondary">Edit</a>
+                                                            </div>
+                                                            <div>
+                                                                <a asp-action="Delete" asp-route-id="@flight.FlightId" class="btn btn-danger">Delete</a>
+                                                            </div>
+                                                    </td>
+                                                    }
+                                                </tr>
+                                            }
+                                        </table>
+
+                                }
+                                else
+                                {
+                                    if (searchPerformed)
+                                    {
+                                        <p>No Flight with "@searchString".</p>
+                                    }else
+                                    {
+                                        <p><b>No Flight Available</b></p>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

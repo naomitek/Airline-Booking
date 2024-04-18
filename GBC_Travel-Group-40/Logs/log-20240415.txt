@@ -1,0 +1,233 @@
+2024-04-15 15:58:46.217 -04:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Identity].[Flights] AS [f]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-04-15 15:58:46.286 -04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Identity].[Cars] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-04-15 15:58:46.290 -04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Identity].[Rooms] AS [r]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-04-15 15:58:46.330 -04:00 [INF] User profile is available. Using 'C:\Users\lizze\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-15 15:58:46.461 -04:00 [INF] Executed DbCommand (38ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Role] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2024-04-15 15:58:46.525 -04:00 [WRN] Role 04f2af42-3044-43fe-85a5-f5765413430b validation failed: DuplicateRoleName.
+2024-04-15 15:58:46.530 -04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Role] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2024-04-15 15:58:46.531 -04:00 [WRN] Role 14b4f7a6-fee8-4a37-aa00-acb1120933f1 validation failed: DuplicateRoleName.
+2024-04-15 15:58:46.536 -04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Role] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2024-04-15 15:58:46.542 -04:00 [WRN] Role 73144a18-bf63-41f3-bc0f-6a7c56dd6402 validation failed: DuplicateRoleName.
+2024-04-15 15:58:46.551 -04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__superUser_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN NOT EXISTS (
+        SELECT 1
+        FROM [Identity].[User] AS [u]
+        WHERE [u].[Id] = @__superUser_Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-04-15 15:58:46.561 -04:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [u].[UsernameChangeLimit]
+FROM [Identity].[User] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2024-04-15 15:58:47.066 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-15 15:58:47.067 -04:00 [INF] Hosting environment: Development
+2024-04-15 15:58:47.067 -04:00 [INF] Content root path: C:\Users\lizze\source\repos\GBC_Travel-Group-40
+2024-04-15 15:58:47.139 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/ - null null
+2024-04-15 15:58:47.787 -04:00 [WRN] Failed to determine the https port for redirect.
+2024-04-15 15:58:47.831 -04:00 [INF] Request: GET / => started
+2024-04-15 15:58:47.835 -04:00 [INF] Executing endpoint 'GBC_Travel_Group_40.Controllers.HomeController.Index (GBC_Travel-Group-40)'
+2024-04-15 15:58:47.848 -04:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller GBC_Travel_Group_40.Controllers.HomeController (GBC_Travel-Group-40).
+2024-04-15 15:58:47.868 -04:00 [INF] Executing ViewResult, running view Index.
+2024-04-15 15:58:47.998 -04:00 [INF] Executed ViewResult - view Index executed in 132.347ms.
+2024-04-15 15:58:48.003 -04:00 [INF] Executed action GBC_Travel_Group_40.Controllers.HomeController.Index (GBC_Travel-Group-40) in 152.8326ms
+2024-04-15 15:58:48.004 -04:00 [INF] Executed endpoint 'GBC_Travel_Group_40.Controllers.HomeController.Index (GBC_Travel-Group-40)'
+2024-04-15 15:58:48.028 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/images/resort/resort.jpeg - null null
+2024-04-15 15:58:48.028 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/GBC_Travel_Group_40.styles.css - null null
+2024-04-15 15:58:48.029 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2024-04-15 15:58:48.033 -04:00 [INF] Session started; Key:04fc460a-9777-a068-fa88-8c0cd27f8a83, Id:1e1213ca-7e42-4f99-3ea3-5da141103b06
+2024-04-15 15:58:48.033 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/images/advertisement/gbc.jpeg - null null
+2024-04-15 15:58:48.038 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/css/site.css?v=pAGv4ietcJNk_EwsQZ5BN9-K4MuNYS2a9wl4Jw-q9D0 - null null
+2024-04-15 15:58:48.045 -04:00 [INF] Request: GET / => completed with 200
+2024-04-15 15:58:48.054 -04:00 [INF] Request: GET /GBC_Travel_Group_40.styles.css => started
+2024-04-15 15:58:48.055 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/images/resort/resort2.jpeg - null null
+2024-04-15 15:58:48.057 -04:00 [INF] Request: GET /GBC_Travel_Group_40.styles.css => completed with 404
+2024-04-15 15:58:48.060 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/GBC_Travel_Group_40.styles.css - 404 null null 31.4596ms
+2024-04-15 15:58:48.060 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/ - 200 null text/html; charset=utf-8 928.911ms
+2024-04-15 15:58:48.062 -04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:22786/GBC_Travel_Group_40.styles.css, Response status code: 404
+2024-04-15 15:58:48.064 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/images/resort/resort3.jpeg - null null
+2024-04-15 15:58:48.088 -04:00 [INF] Sending file. Request path: '/images/resort/resort.jpeg'. Physical path: 'C:\Users\lizze\source\repos\GBC_Travel-Group-40\wwwroot\images\resort\resort.jpeg'
+2024-04-15 15:58:48.088 -04:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\lizze\source\repos\GBC_Travel-Group-40\wwwroot\css\site.css'
+2024-04-15 15:58:48.088 -04:00 [INF] Sending file. Request path: '/images/resort/resort2.jpeg'. Physical path: 'C:\Users\lizze\source\repos\GBC_Travel-Group-40\wwwroot\images\resort\resort2.jpeg'
+2024-04-15 15:58:48.088 -04:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\lizze\source\repos\GBC_Travel-Group-40\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2024-04-15 15:58:48.089 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/css/site.css?v=pAGv4ietcJNk_EwsQZ5BN9-K4MuNYS2a9wl4Jw-q9D0 - 200 362 text/css 51.0593ms
+2024-04-15 15:58:48.099 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/images/resort/resort4.jpeg - null null
+2024-04-15 15:58:48.099 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/images/resort/resort2.jpeg - 200 396438 image/jpeg 43.5069ms
+2024-04-15 15:58:48.099 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/images/resort/resort.jpeg - 200 303612 image/jpeg 70.3723ms
+2024-04-15 15:58:48.099 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/lib/bootstrap/dist/css/bootstrap.min.css - 200 162720 text/css 70.1796ms
+2024-04-15 15:58:48.103 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/lib/jquery/dist/jquery.min.js - null null
+2024-04-15 15:58:48.104 -04:00 [INF] Sending file. Request path: '/images/resort/resort3.jpeg'. Physical path: 'C:\Users\lizze\source\repos\GBC_Travel-Group-40\wwwroot\images\resort\resort3.jpeg'
+2024-04-15 15:58:48.104 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2024-04-15 15:58:48.106 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+2024-04-15 15:58:48.110 -04:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\lizze\source\repos\GBC_Travel-Group-40\wwwroot\js\site.js'
+2024-04-15 15:58:48.110 -04:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\lizze\source\repos\GBC_Travel-Group-40\wwwroot\lib\jquery\dist\jquery.min.js'
+2024-04-15 15:58:48.111 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 200 231 text/javascript 4.0896ms
+2024-04-15 15:58:48.111 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/images/resort/resort3.jpeg - 200 528473 image/jpeg 46.6876ms
+2024-04-15 15:58:48.114 -04:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\lizze\source\repos\GBC_Travel-Group-40\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2024-04-15 15:58:48.114 -04:00 [INF] Sending file. Request path: '/images/advertisement/gbc.jpeg'. Physical path: 'C:\Users\lizze\source\repos\GBC_Travel-Group-40\wwwroot\images\advertisement\gbc.jpeg'
+2024-04-15 15:58:48.114 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/lib/jquery/dist/jquery.min.js - 200 89501 text/javascript 10.6319ms
+2024-04-15 15:58:48.114 -04:00 [INF] Sending file. Request path: '/images/resort/resort4.jpeg'. Physical path: 'C:\Users\lizze\source\repos\GBC_Travel-Group-40\wwwroot\images\resort\resort4.jpeg'
+2024-04-15 15:58:48.119 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/_framework/aspnetcore-browser-refresh.js - null null
+2024-04-15 15:58:48.119 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/images/advertisement/gbc.jpeg - 200 722984 image/jpeg 88.4757ms
+2024-04-15 15:58:48.123 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/images/advertisement/banner.jpeg - null null
+2024-04-15 15:58:48.125 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/images/resort/resort4.jpeg - 200 519510 image/jpeg 26.7425ms
+2024-04-15 15:58:48.125 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 78468 text/javascript 21.2115ms
+2024-04-15 15:58:48.126 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 6.9584ms
+2024-04-15 15:58:48.131 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/images/vacation/vacation.jpeg - null null
+2024-04-15 15:58:48.135 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/images/vacation/vacation1.jpeg - null null
+2024-04-15 15:58:48.135 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/images/vacation/vacation2.jpeg - null null
+2024-04-15 15:58:48.140 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/images/vacation/vacation3.jpeg - null null
+2024-04-15 15:58:48.141 -04:00 [INF] Sending file. Request path: '/images/vacation/vacation1.jpeg'. Physical path: 'C:\Users\lizze\source\repos\GBC_Travel-Group-40\wwwroot\images\vacation\vacation1.jpeg'
+2024-04-15 15:58:48.141 -04:00 [INF] Sending file. Request path: '/images/vacation/vacation.jpeg'. Physical path: 'C:\Users\lizze\source\repos\GBC_Travel-Group-40\wwwroot\images\vacation\vacation.jpeg'
+2024-04-15 15:58:48.143 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/images/vacation/vacation1.jpeg - 200 114953 image/jpeg 7.9406ms
+2024-04-15 15:58:48.144 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/images/vacation/vacation.jpeg - 200 273859 image/jpeg 12.6813ms
+2024-04-15 15:58:48.145 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/images/vacation/vacation4.jpeg - null null
+2024-04-15 15:58:48.152 -04:00 [INF] Sending file. Request path: '/images/vacation/vacation4.jpeg'. Physical path: 'C:\Users\lizze\source\repos\GBC_Travel-Group-40\wwwroot\images\vacation\vacation4.jpeg'
+2024-04-15 15:58:48.154 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/images/vacation/vacation4.jpeg - 200 206111 image/jpeg 8.919ms
+2024-04-15 15:58:48.155 -04:00 [INF] Sending file. Request path: '/images/vacation/vacation2.jpeg'. Physical path: 'C:\Users\lizze\source\repos\GBC_Travel-Group-40\wwwroot\images\vacation\vacation2.jpeg'
+2024-04-15 15:58:48.155 -04:00 [INF] Sending file. Request path: '/images/advertisement/banner.jpeg'. Physical path: 'C:\Users\lizze\source\repos\GBC_Travel-Group-40\wwwroot\images\advertisement\banner.jpeg'
+2024-04-15 15:58:48.158 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/images/vacation/vacation5.jpeg - null null
+2024-04-15 15:58:48.158 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/images/vacation/vacation6.jpeg - null null
+2024-04-15 15:58:48.179 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/images/vacation/vacation16.jpeg - null null
+2024-04-15 15:58:48.196 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/images/advertisement/banner.jpeg - 200 1089094 image/jpeg 72.8837ms
+2024-04-15 15:58:48.202 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/images/vacation/vacation8.jpeg - null null
+2024-04-15 15:58:48.213 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/images/vacation/vacation2.jpeg - 200 689057 image/jpeg 77.8689ms
+2024-04-15 15:58:48.215 -04:00 [INF] Sending file. Request path: '/images/vacation/vacation3.jpeg'. Physical path: 'C:\Users\lizze\source\repos\GBC_Travel-Group-40\wwwroot\images\vacation\vacation3.jpeg'
+2024-04-15 15:58:48.215 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/images/vacation/vacation15.jpeg - null null
+2024-04-15 15:58:48.217 -04:00 [INF] Sending file. Request path: '/images/vacation/vacation6.jpeg'. Physical path: 'C:\Users\lizze\source\repos\GBC_Travel-Group-40\wwwroot\images\vacation\vacation6.jpeg'
+2024-04-15 15:58:48.231 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/images/vacation/vacation6.jpeg - 200 318334 image/jpeg 72.0469ms
+2024-04-15 15:58:48.231 -04:00 [INF] Sending file. Request path: '/images/vacation/vacation8.jpeg'. Physical path: 'C:\Users\lizze\source\repos\GBC_Travel-Group-40\wwwroot\images\vacation\vacation8.jpeg'
+2024-04-15 15:58:48.232 -04:00 [INF] Sending file. Request path: '/images/vacation/vacation5.jpeg'. Physical path: 'C:\Users\lizze\source\repos\GBC_Travel-Group-40\wwwroot\images\vacation\vacation5.jpeg'
+2024-04-15 15:58:48.234 -04:00 [INF] Sending file. Request path: '/images/vacation/vacation16.jpeg'. Physical path: 'C:\Users\lizze\source\repos\GBC_Travel-Group-40\wwwroot\images\vacation\vacation16.jpeg'
+2024-04-15 15:58:48.236 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/images/vacation/vacation8.jpeg - 200 303612 image/jpeg 34.7718ms
+2024-04-15 15:58:48.237 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/images/vacation/vacation10.jpeg - null null
+2024-04-15 15:58:48.241 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/images/vacation/vacation3.jpeg - 200 834780 image/jpeg 101.224ms
+2024-04-15 15:58:48.244 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/images/vacation/vacation11.jpeg - null null
+2024-04-15 15:58:48.244 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/images/vacation/vacation5.jpeg - 200 591226 image/jpeg 85.877ms
+2024-04-15 15:58:48.248 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/images/vacation/vacation16.jpeg - 200 656549 image/jpeg 69.6604ms
+2024-04-15 15:58:48.248 -04:00 [INF] Sending file. Request path: '/images/vacation/vacation15.jpeg'. Physical path: 'C:\Users\lizze\source\repos\GBC_Travel-Group-40\wwwroot\images\vacation\vacation15.jpeg'
+2024-04-15 15:58:48.251 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/images/vacation/vacation12.jpeg - null null
+2024-04-15 15:58:48.253 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/images/vacation/vacation15.jpeg - 200 519510 image/jpeg 38.0861ms
+2024-04-15 15:58:48.257 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/images/vacation/vacation13.jpeg - null null
+2024-04-15 15:58:48.263 -04:00 [INF] Sending file. Request path: '/images/vacation/vacation11.jpeg'. Physical path: 'C:\Users\lizze\source\repos\GBC_Travel-Group-40\wwwroot\images\vacation\vacation11.jpeg'
+2024-04-15 15:58:48.265 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/images/vacation/vacation14.jpeg - null null
+2024-04-15 15:58:48.266 -04:00 [INF] Sending file. Request path: '/images/vacation/vacation10.jpeg'. Physical path: 'C:\Users\lizze\source\repos\GBC_Travel-Group-40\wwwroot\images\vacation\vacation10.jpeg'
+2024-04-15 15:58:48.269 -04:00 [INF] Sending file. Request path: '/images/vacation/vacation12.jpeg'. Physical path: 'C:\Users\lizze\source\repos\GBC_Travel-Group-40\wwwroot\images\vacation\vacation12.jpeg'
+2024-04-15 15:58:48.270 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/images/vacation/vacation11.jpeg - 200 528473 image/jpeg 26.4825ms
+2024-04-15 15:58:48.271 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/images/vacation/vacation9.jpeg - null null
+2024-04-15 15:58:48.272 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/images/vacation/vacation12.jpeg - 200 369862 image/jpeg 20.9327ms
+2024-04-15 15:58:48.278 -04:00 [INF] Sending file. Request path: '/images/vacation/vacation13.jpeg'. Physical path: 'C:\Users\lizze\source\repos\GBC_Travel-Group-40\wwwroot\images\vacation\vacation13.jpeg'
+2024-04-15 15:58:48.280 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/images/vacation/vacation13.jpeg - 200 442478 image/jpeg 23.0283ms
+2024-04-15 15:58:48.279 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/images/vacation/vacation10.jpeg - 200 821016 image/jpeg 42.4744ms
+2024-04-15 15:58:48.287 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/_vs/browserLink - null null
+2024-04-15 15:58:48.291 -04:00 [INF] Sending file. Request path: '/images/vacation/vacation9.jpeg'. Physical path: 'C:\Users\lizze\source\repos\GBC_Travel-Group-40\wwwroot\images\vacation\vacation9.jpeg'
+2024-04-15 15:58:48.293 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/images/vacation/vacation9.jpeg - 200 214526 image/jpeg 21.6384ms
+2024-04-15 15:58:48.295 -04:00 [INF] Sending file. Request path: '/images/vacation/vacation14.jpeg'. Physical path: 'C:\Users\lizze\source\repos\GBC_Travel-Group-40\wwwroot\images\vacation\vacation14.jpeg'
+2024-04-15 15:58:48.302 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/images/vacation/vacation14.jpeg - 200 556511 image/jpeg 37.8497ms
+2024-04-15 15:58:48.390 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/_vs/browserLink - 200 null text/javascript; charset=UTF-8 102.9419ms
+2024-04-15 15:58:48.646 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - null null
+2024-04-15 15:58:48.657 -04:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\lizze\source\repos\GBC_Travel-Group-40\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2024-04-15 15:58:48.679 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - 200 327261 text/plain 33.1618ms
+2024-04-15 16:14:09.904 -04:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Identity].[Flights] AS [f]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-04-15 16:14:09.982 -04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Identity].[Cars] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-04-15 16:14:09.988 -04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Identity].[Rooms] AS [r]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-04-15 16:14:10.014 -04:00 [INF] User profile is available. Using 'C:\Users\lizze\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-15 16:14:10.148 -04:00 [INF] Executed DbCommand (35ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Role] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2024-04-15 16:14:10.204 -04:00 [WRN] Role 660cbafe-1676-4c04-9783-39c47ea8ddb4 validation failed: DuplicateRoleName.
+2024-04-15 16:14:10.208 -04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Role] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2024-04-15 16:14:10.209 -04:00 [WRN] Role 46e330c6-219b-4597-902e-15fb6ff632bc validation failed: DuplicateRoleName.
+2024-04-15 16:14:10.211 -04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Role] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2024-04-15 16:14:10.211 -04:00 [WRN] Role 2c7294f4-3433-46b7-82f9-758a33ffa643 validation failed: DuplicateRoleName.
+2024-04-15 16:14:10.220 -04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__superUser_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN NOT EXISTS (
+        SELECT 1
+        FROM [Identity].[User] AS [u]
+        WHERE [u].[Id] = @__superUser_Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-04-15 16:14:10.232 -04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [u].[UsernameChangeLimit]
+FROM [Identity].[User] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2024-04-15 16:14:10.546 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-15 16:14:10.546 -04:00 [INF] Hosting environment: Development
+2024-04-15 16:14:10.546 -04:00 [INF] Content root path: C:\Users\lizze\source\repos\GBC_Travel-Group-40
+2024-04-15 16:14:10.577 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/ - null null
+2024-04-15 16:14:10.663 -04:00 [WRN] Failed to determine the https port for redirect.
+2024-04-15 16:14:10.694 -04:00 [INF] Request: GET / => started
+2024-04-15 16:14:10.698 -04:00 [INF] Executing endpoint 'GBC_Travel_Group_40.Controllers.HomeController.Index (GBC_Travel-Group-40)'
+2024-04-15 16:14:10.707 -04:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller GBC_Travel_Group_40.Controllers.HomeController (GBC_Travel-Group-40).
+2024-04-15 16:14:10.720 -04:00 [INF] Executing ViewResult, running view Index.
+2024-04-15 16:14:10.833 -04:00 [INF] Executed ViewResult - view Index executed in 113.7459ms.
+2024-04-15 16:14:10.837 -04:00 [INF] Executed action GBC_Travel_Group_40.Controllers.HomeController.Index (GBC_Travel-Group-40) in 129.4039ms
+2024-04-15 16:14:10.838 -04:00 [INF] Executed endpoint 'GBC_Travel_Group_40.Controllers.HomeController.Index (GBC_Travel-Group-40)'
+2024-04-15 16:14:10.841 -04:00 [INF] Session started; Key:c7c4d10b-5041-b676-d4d8-1c13c2ff0335, Id:2b8670df-77d1-c57f-3e01-0ee73ecd22d4
+2024-04-15 16:14:10.842 -04:00 [INF] Request: GET / => completed with 200
+2024-04-15 16:14:10.847 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/ - 200 null text/html; charset=utf-8 273.8739ms
+2024-04-15 16:14:10.858 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/GBC_Travel_Group_40.styles.css - null null
+2024-04-15 16:14:10.863 -04:00 [INF] Request: GET /GBC_Travel_Group_40.styles.css => started
+2024-04-15 16:14:10.865 -04:00 [INF] Request: GET /GBC_Travel_Group_40.styles.css => completed with 404
+2024-04-15 16:14:10.867 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/GBC_Travel_Group_40.styles.css - 404 null null 9.1886ms
+2024-04-15 16:14:10.868 -04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:22786/GBC_Travel_Group_40.styles.css, Response status code: 404
+2024-04-15 16:14:10.879 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/_framework/aspnetcore-browser-refresh.js - null null
+2024-04-15 16:14:10.883 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 3.7525ms
+2024-04-15 16:14:10.921 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - null null
+2024-04-15 16:14:10.952 -04:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\lizze\source\repos\GBC_Travel-Group-40\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2024-04-15 16:14:10.991 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - 200 327261 text/plain 69.7933ms
+2024-04-15 16:14:11.032 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:22786/_vs/browserLink - null null
+2024-04-15 16:14:11.093 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:22786/_vs/browserLink - 200 null text/javascript; charset=UTF-8 61.6702ms

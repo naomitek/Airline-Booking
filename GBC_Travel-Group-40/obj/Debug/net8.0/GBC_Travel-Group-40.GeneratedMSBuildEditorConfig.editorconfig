@@ -1,0 +1,327 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = GBC_Travel_Group_40
+build_property.RootNamespace = GBC_Travel_Group_40
+build_property.ProjectDir = C:\Users\lizze\source\repos\GBC_Travel-Group-40\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\lizze\source\repos\GBC_Travel-Group-40
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/Identity/Pages/Account/ConfirmEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxDb25maXJtRW1haWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/Identity/Pages/Account/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/Identity/Pages/Account/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/Identity/Pages/Account/Manage/EnableAuthenticator.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRW5hYmxlQXV0aGVudGljYXRvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/Identity/Pages/Account/Manage/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/BookingFlights/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcQm9va2luZ0ZsaWdodHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/BookingFlights/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcQm9va2luZ0ZsaWdodHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/BookingFlights/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcQm9va2luZ0ZsaWdodHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/BookingFlights/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcQm9va2luZ0ZsaWdodHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/BookingFlights/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcQm9va2luZ0ZsaWdodHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/BookingFlights/MakeBooking.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcQm9va2luZ0ZsaWdodHNcTWFrZUJvb2tpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/CarBooking/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcQ2FyQm9va2luZ1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/CarBooking/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcQ2FyQm9va2luZ1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/CarBooking/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcQ2FyQm9va2luZ1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/CarBooking/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcQ2FyQm9va2luZ1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/CarBooking/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcQ2FyQm9va2luZ1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/Cart/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcQ2FydFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/Cart/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/Cart/Payment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcQ2FydFxQYXltZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/Car/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcQ2FyXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/Car/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcQ2FyXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/Car/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcQ2FyXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/Car/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcQ2FyXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/Car/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcQ2FyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/Flights/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcRmxpZ2h0c1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/Flights/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcRmxpZ2h0c1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/Flights/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcRmxpZ2h0c1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/Flights/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcRmxpZ2h0c1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/Flights/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcRmxpZ2h0c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/Passengers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcUGFzc2VuZ2Vyc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/RoomBooking/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcUm9vbUJvb2tpbmdcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/RoomBooking/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcUm9vbUJvb2tpbmdcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/RoomBooking/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcUm9vbUJvb2tpbmdcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/RoomBooking/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcUm9vbUJvb2tpbmdcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/RoomBooking/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcUm9vbUJvb2tpbmdcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/Room/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcUm9vbVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/Room/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcUm9vbVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/Room/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcUm9vbVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/Room/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcUm9vbVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/Room/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcUm9vbVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Areas/ProductManagement/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZW1lbnRcVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Views/DisplayTemplates/DateTime.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzcGxheVRlbXBsYXRlc1xEYXRlVGltZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Views/DisplayTemplates/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzcGxheVRlbXBsYXRlc1xfTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Views/DisplayTemplates/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzcGxheVRlbXBsYXRlc1xfVmFsaWRhdGlvblNjcmlwdHNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Views/Home/AboutUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dFVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Views/RoleManager/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZU1hbmFnZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Views/Shared/Components/CartItem/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2FydEl0ZW1cRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Views/Shared/DateTime.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXERhdGVUaW1lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Views/Shared/DisplayTemplates/DateTime.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXERpc3BsYXlUZW1wbGF0ZXNcRGF0ZVRpbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Views/Shared/FailBooking.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEZhaWxCb29raW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Views/Shared/InternalServerError.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEludGVybmFsU2VydmVyRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Views/Shared/NotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE5vdEZvdW5kLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Views/Shared/UpdateFail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFVwZGF0ZUZhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Views/Shared/_Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb290ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Views/Shared/_Header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9IZWFkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Views/Shared/_Navbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OYXZiYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Views/UserRoles/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclJvbGVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Views/UserRoles/Manage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclJvbGVzXE1hbmFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Views/UserRoles/NotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclJvbGVzXE5vdEZvdW5kLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lizze/source/repos/GBC_Travel-Group-40/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-j5ciphc1ao

@@ -1,0 +1,168 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+}
+
+
+<div class="row">
+    <div class="col-md-4 mx-auto">
+        <section class="border rounded-3 p-4 shadow">
+            <h2>Sign In</h2>
+            <p>
+                New User? <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Create an account</a>
+            </p>
+
+            <div class="row justify-content-center">
+                <a id="forgot-password" asp-page="./ForgotPassword" class="btn btn-sm btn-link">Forgot your password</a>
+            </div>
+            <form id="account" method="post">
+                <hr />
+                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                    <label asp-for="Input.Email" class="form-label">Email/UserName</label>
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="password" />
+                    <label asp-for="Input.Password" class="form-label">Password</label>
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+                <div class="checkbox mb-3">
+                    <label asp-for="Input.RememberMe" class="form-label">
+                        <input class="form-check-input" asp-for="Input.RememberMe" />
+                        @Html.DisplayNameFor(m => m.Input.RememberMe)
+                    </label>
+                </div>
+                <div class="row justify-content-center">
+                    <button id="login-submit" type="submit" class="btn btn-md btn-primary rounded-3" style="background-color: #35374B;">Log in</button>
+                </div>
+                <hr />
+                
+                <div class="row justify-content-center">
+                    <button id="resend-confirmation" asp-page="./ResendEmailConfirmation" class="btn btn-sm btn-link">Resend email confirmation</button>
+                </div>
+
+            </form>
+        </section>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+<style>
+
+    body {
+        background-color: #E0D9EB;
+        font-family: Arial, sans-serif;
+    }
+
+    #account {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        margin: 50px auto;
+        max-width: 400px;
+    }
+
+        #account h2 {
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        #account .form-floating {
+            margin-bottom: 20px;
+        }
+
+        #account .form-control {
+            border-radius: 20px;
+        }
+
+        #account .form-label {
+            color: #555;
+        }
+
+        #account button {
+            background-color: purple;
+            color: #fff;
+            border-radius: 20px;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+            #account button:hover {
+                background-color: darkgoldenrod;
+            }
+
+        #account .checkbox label {
+            color: #555;
+        }
+
+        #account .checkbox input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        #account .text-danger {
+            color: red;
+        }
+
+        #account .form-footer {
+            text-align: center;
+        }
+
+            #account .form-footer a {
+                color: #4b0082;
+                text-decoration: none;
+            }
+
+                #account .form-footer a:hover {
+                    text-decoration: underline;
+                }
+
+
+    #external-account {
+        margin-top: 20px;
+    }
+
+        #external-account h3 {
+            margin-bottom: 20px;
+        }
+
+        #external-account button {
+            margin-bottom: 10px;
+        }
+
+
+    .row {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+    .col-md-4,
+    .col-md-6 {
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .col-md-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .col-md-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .col-md-offset-2 {
+        margin-left: 16.666667%;
+    }
+</style>

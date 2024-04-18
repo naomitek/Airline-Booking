@@ -1,0 +1,130 @@
+﻿@model GBC_Travel_Group_40.Areas.ProductManagement.Models.Passengers
+@{
+    ViewData["Title"] = "CreatePassengers";
+    int numPassengers = ViewData["numPassengers"] as int? ?? 1;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enter Passenger Information</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <style>
+        body {
+            background-color: whitesmoke;
+        }
+
+        .container {
+            background-color: #e0d9eb;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+
+        h1, h4 {
+            color: blue;
+        }
+
+        label {
+            color: black;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            border-color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h4 class="text-center">Enter Passenger Information</h4>
+        <hr />
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <form asp-action="MakeBooking" asp-route-fid="@ViewBag.fid" asp-route-numPassengers="@numPassengers" asp-controller="BookingFlights" class="needs-validation" novalidate>
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="FirstName" class="control-label"></label>
+                        <input asp-for="FirstName" class="form-control" />
+                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="LastName" class="control-label"></label>
+                        <input asp-for="LastName" class="form-control" />
+                        <span asp-validation-for="LastName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Email" class="control-label"></label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Phone" class="control-label"></label>
+                        <input asp-for="Phone" class="form-control" />
+                        <span asp-validation-for="Phone" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Address" class="control-label"></label>
+                        <input asp-for="Address" class="form-control" />
+                        <span asp-validation-for="Address" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Birth" class="control-label"></label>
+                        <input asp-for="Birth" class="form-control" />
+                        <span asp-validation-for="Birth" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Citizen" class="control-label"></label>
+                        <input asp-for="Citizen" class="form-control" />
+                        <span asp-validation-for="Citizen" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Passport" class="control-label"></label>
+                        <input asp-for="Passport" class="form-control" />
+                        <span asp-validation-for="Passport" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Gender" class="control-label"></label>
+                        <input asp-for="Gender" class="form-control" />
+                        <span asp-validation-for="Gender" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="EmergencyContactName" class="control-label"></label>*Not necessary
+                        <input asp-for="EmergencyContactName" class="form-control" />
+                        <span asp-validation-for="EmergencyContactName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="EmergencyContactPhone" class="control-label"></label>*Not necessary
+                        <input asp-for="EmergencyContactPhone" class="form-control" />
+                        <span asp-validation-for="EmergencyContactPhone" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Book" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div>
+            <a asp-action="Index" asp-controller="Flights">Cancel</a>
+        </div>
+        <!-- Add Bootstrap JS and jQuery links -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+

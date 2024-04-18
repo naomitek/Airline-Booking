@@ -1,0 +1,39 @@
+﻿@model GBC_Travel_Group_40.Areas.ProductManagement.Models.RoomBookings
+
+@{
+    ViewData["Title"] = "Create RoomBooking";
+
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Create" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <input asp-for="RoomId" type="hidden" />
+    <input asp-for="UserId" type="hidden" />
+
+    <div class="form-group">
+        <label asp-for="RoomId" class="control-label">Room ID: @Model.RoomId</label>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="NameOfHolder" class="control-label">Name of Holder</label>
+        <input asp-for="NameOfHolder" class="form-control" />
+        <span asp-validation-for="NameOfHolder" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PhoneOfHolder" class="control-label">Phone of Holder</label>
+        <input asp-for="PhoneOfHolder" class="form-control" />
+        <span asp-validation-for="PhoneOfHolder" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index" asp-controller="Room">Back to List</a>
+</div>

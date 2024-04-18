@@ -1,0 +1,156 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+
+<div class="row">
+    <div class="col-md-4 mx-auto">
+        <section class="border rounded-3 p-4 shadow">
+            <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                <h2>Create Account</h2>
+                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.FirstName" class="form-control" aria-required="true" placeholder="Bruce" />
+                    <label asp-for="Input.FirstName">First Name</label>
+                    <span asp-validation-for="Input.FirstName" class="text-danger"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.LastName" class="form-control" aria-required="true" placeholder="Lee" />
+                    <label asp-for="Input.LastName">Last Name</label>
+                    <span asp-validation-for="Input.LastName" class="text-danger"></span>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="example.com" />
+                    <label asp-for="Input.Email">Email</label>
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
+                    <label asp-for="Input.Password">Password</label>
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
+                    <label asp-for="Input.ConfirmPassword">Confirm Password</label>
+                    <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                </div>
+                <div class="row justify-content-center">
+                    <button id="registerSubmit" type="submit" class="btn btn-md btn-primary rounded-3" style="background-color: #35374B;">Register</button>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+
+<style>
+
+    body {
+        background-color: #E0D9EB;
+        font-family: Arial, sans-serif;
+    }
+
+    #registerForm {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        margin: 50px auto;
+        max-width: 400px;
+    }
+
+        #registerForm h2 {
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        #registerForm .form-floating {
+            margin-bottom: 20px;
+        }
+
+        #registerForm .form-control {
+            border-radius: 20px;
+        }
+
+        #registerForm .form-label {
+            color: #555;
+        }
+
+        #registerForm button {
+            background-color: purple;
+            color: #fff;
+            border-radius: 20px;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+            #registerForm button:hover {
+                background-color: darkgoldenrod;
+            }
+
+        #registerForm .text-danger {
+            color: red;
+        }
+
+        #registerForm .form-footer {
+            text-align: center;
+        }
+
+            #registerForm .form-footer a {
+                color: #9370DB;
+                text-decoration: none;
+            }
+
+                #registerForm .form-footer a:hover {
+                    text-decoration: underline;
+                }
+
+
+    #external-account {
+        margin-top: 20px;
+    }
+
+        #external-account h3 {
+            margin-bottom: 20px;
+        }
+
+        #external-account button {
+            margin-bottom: 10px;
+        }
+
+
+    .row {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+    .col-md-4,
+    .col-md-6 {
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .col-md-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .col-md-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .col-md-offset-2 {
+        margin-left: 16.666667%;
+    }
+</style>
